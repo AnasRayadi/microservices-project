@@ -1,0 +1,34 @@
+#  server.port=8081
+#  spring.application.name=microservice1
+#  eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+
+server:
+  port: 8081
+  error:
+    include-message: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5332/microservices
+    username: postgres
+    password: adminpass
+  application:
+    name: product-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  main:
+    web-application-type: servlet
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+rabbitmq:
+  queue:
+    name: order-created-queue
