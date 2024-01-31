@@ -1,7 +1,7 @@
 package com.springbootproject.rabbitmq;
 
 import com.springbootproject.dao.ProductDao;
-import com.springbootproject.models.Order;
+//import com.springbootproject.models.Order;
 import com.springbootproject.models.Product;
 import com.springbootproject.services.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
+import com.common.models.Order;
 
 @Service
 @RequiredArgsConstructor

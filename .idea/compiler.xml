@@ -9,14 +9,19 @@
         <outputRelativeToContentRoot value="true" />
         <module name="apigateway" />
         <module name="registryservice" />
+        <module name="common" />
         <module name="spring-boot-project" />
         <module name="order" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="myproject" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="apigateway" options="-parameters" />
+      <module name="common" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="registryservice" options="-parameters" />
       <module name="spring-boot-project" options="-parameters" />
